@@ -8,6 +8,6 @@
 
 #import "FlickrShareKey.h"
 
-@implementation FlickrShareKey
-
-@end
+NSString * const kFlickrApiKey      = @"d46ffb2969a03c76b1f196e640b19357";
+NSString * const kFlickrApiSecret   = @"fb81d2851a551927";
+NSString * const kFlickrAuthCallBackNotificationName = @"169d600113d1a903";

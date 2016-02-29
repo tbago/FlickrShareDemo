@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FlickrShareKey : NSObject
-
-@end
+///<Flickr
+extern NSString * const kFlickrApiKey;
+extern NSString * const kFlickrApiSecret;
+extern NSString * const kFlickrAuthCallBackNotificationName;

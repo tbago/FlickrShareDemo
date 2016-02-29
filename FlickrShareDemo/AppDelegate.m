@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <FlickrKit/FlickrKit.h>
+#import "FlickrShareKey.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,29 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[FlickrKit sharedFlickrKit] initializeWithAPIKey:kFlickrApiKey sharedSecret:kFlickrApiSecret];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    NSString *scheme = [url scheme];
+    if ([scheme isEqualToString:@"FlickrShareDemo"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFlickrAuthCallBackNotificationName object:url userInfo:nil];
+        return YES;
+    }
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSString *scheme = [url scheme];
+    if ([scheme isEqualToString:@"FlickrShareDemo"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kFlickrAuthCallBackNotificationName object:url userInfo:nil];
+        return YES;
+    }
     return YES;
 }
 
