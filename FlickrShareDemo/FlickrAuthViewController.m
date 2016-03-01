@@ -43,11 +43,6 @@
     }];
 }
 
-#pragma mark - action
-- (IBAction)backButtonClick:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -55,8 +50,8 @@
     NSURL *url = [request URL];
     // If it's the callback url, then lets trigger that
     if (![url.scheme isEqual:@"http"] && ![url.scheme isEqual:@"https"]) {
-        if ([[UIApplication sharedApplication]canOpenURL:url]) {
-            [[UIApplication sharedApplication]openURL:url];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
             return NO;
         }
     }

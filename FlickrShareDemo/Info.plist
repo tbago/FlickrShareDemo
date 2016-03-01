@@ -27,10 +27,14 @@
 			<string>com.devedup.flickrkit</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>FlickrShareDemo</string>
+				<string>flickrsharedemo</string>
 			</array>
 		</dict>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>flickrsharedemo</string>
+    </array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>

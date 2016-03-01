@@ -56,7 +56,7 @@
                                     <outlet property="delegate" destination="ac8-pn-Mwi" id="dKj-98-U4s"/>
                                 </connections>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-TG-svp">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-TG-svp">
                                 <rect key="frame" x="282" y="282" width="37" height="37"/>
                                 <color key="color" red="0.12549019610000001" green="0.70196078429999997" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
@@ -73,7 +73,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="bPd-TG-svp" id="pBR-Ld-4CW"/>
+                        <outlet property="activityIndicatorView" destination="bPd-TG-svp" id="e0Z-Bt-NQ4"/>
                         <outlet property="webView" destination="VTo-u1-3SI" id="t0u-s5-I6N"/>
                     </connections>
                 </viewController>
