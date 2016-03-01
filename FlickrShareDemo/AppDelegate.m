@@ -28,7 +28,7 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     NSString *scheme = [url scheme];
-    if ([scheme isEqualToString:@"FlickrShareDemo"]) {
+    if ([scheme isEqualToString:@"flickrsharedemo"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kFlickrAuthCallBackNotificationName object:url userInfo:nil];
         return YES;
     }
@@ -37,7 +37,7 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     NSString *scheme = [url scheme];
-    if ([scheme isEqualToString:@"FlickrShareDemo"]) {
+    if ([scheme isEqualToString:@"flickrsharedemo"]) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kFlickrAuthCallBackNotificationName object:url userInfo:nil];
         return YES;
     }

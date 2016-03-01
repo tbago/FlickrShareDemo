@@ -25,7 +25,6 @@
     self.title = @"Flickr Auth";
     
     // This must be defined in your Info.plist
-    // See FlickrKitDemo-Info.plist
     // Flickr will call this back. Ensure you configure your flickr app as a web app
     NSString *callbackURLString = @"FlickrShareDemo://auth";
     
