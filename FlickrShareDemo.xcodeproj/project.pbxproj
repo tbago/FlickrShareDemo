@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB9CCFACAEDCCE671B3FA15A /* libPods-FlickrShareDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 181A3E261DA945C29F808970 /* libPods-FlickrShareDemo.a */; };
 		D02701491C843E3D0080C7F8 /* FlickrShareKey.m in Sources */ = {isa = PBXBuildFile; fileRef = D02701481C843E3D0080C7F8 /* FlickrShareKey.m */; };
+		D0801EAB1C851E0400718CE6 /* FlickrAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0801EAA1C851E0400718CE6 /* FlickrAuthViewController.m */; };
 		D0934CF01C843BDD00F05302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0934CEF1C843BDD00F05302 /* main.m */; };
 		D0934CF31C843BDD00F05302 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0934CF21C843BDD00F05302 /* AppDelegate.m */; };
 		D0934CF61C843BDD00F05302 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0934CF51C843BDD00F05302 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		79D284B5317685212AEB1D40 /* Pods-FlickrShareDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrShareDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrShareDemo/Pods-FlickrShareDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D02701471C843E3D0080C7F8 /* FlickrShareKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrShareKey.h; sourceTree = "<group>"; };
 		D02701481C843E3D0080C7F8 /* FlickrShareKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrShareKey.m; sourceTree = "<group>"; };
+		D0801EA91C851E0400718CE6 /* FlickrAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAuthViewController.h; sourceTree = "<group>"; };
+		D0801EAA1C851E0400718CE6 /* FlickrAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrAuthViewController.m; sourceTree = "<group>"; };
 		D0934CEB1C843BDD00F05302 /* FlickrShareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrShareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0934CEF1C843BDD00F05302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0934CF11C843BDD00F05302 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				D02701481C843E3D0080C7F8 /* FlickrShareKey.m */,
 				D0934CF41C843BDD00F05302 /* ViewController.h */,
 				D0934CF51C843BDD00F05302 /* ViewController.m */,
+				D0801EA91C851E0400718CE6 /* FlickrAuthViewController.h */,
+				D0801EAA1C851E0400718CE6 /* FlickrAuthViewController.m */,
 				D0934CF71C843BDD00F05302 /* Main.storyboard */,
 				D0934CFA1C843BDD00F05302 /* Assets.xcassets */,
 				D0934CFC1C843BDD00F05302 /* LaunchScreen.storyboard */,
@@ -217,6 +222,7 @@
 				D0934CF31C843BDD00F05302 /* AppDelegate.m in Sources */,
 				D02701491C843E3D0080C7F8 /* FlickrShareKey.m in Sources */,
 				D0934CF01C843BDD00F05302 /* main.m in Sources */,
+				D0801EAB1C851E0400718CE6 /* FlickrAuthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

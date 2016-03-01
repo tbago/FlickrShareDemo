@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P4X-vP-j6L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-Zg-2B0">
+                                <rect key="frame" x="228" y="285" width="145" height="30"/>
+                                <state key="normal" title="Share Image to Flickr"/>
+                                <connections>
+                                    <action selector="shareImageToFlickrButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6wn-WD-pfa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pZA-Zg-2B0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q9n-LV-rdS"/>
+                            <constraint firstItem="pZA-Zg-2B0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WDU-iH-4Fa"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="N0h-VS-NwI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="331" y="629"/>
+        </scene>
+        <!--Flickr Auth View Controller-->
+        <scene sceneID="FLL-at-FiO">
+            <objects>
+                <viewController storyboardIdentifier="FlickrAuthViewController" automaticallyAdjustsScrollViewInsets="NO" id="ac8-pn-Mwi" customClass="FlickrAuthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMj-gq-OAQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Hv-VC-Idt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jev-Cu-iBk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-u1-3SI">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ac8-pn-Mwi" id="dKj-98-U4s"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-TG-svp">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <color key="color" red="0.12549019610000001" green="0.70196078429999997" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VTo-u1-3SI" firstAttribute="leading" secondItem="Jev-Cu-iBk" secondAttribute="leading" id="JSO-2f-Qnr"/>
+                            <constraint firstAttribute="trailing" secondItem="VTo-u1-3SI" secondAttribute="trailing" id="ScO-Z7-2Je"/>
+                            <constraint firstItem="5Hv-VC-Idt" firstAttribute="top" secondItem="VTo-u1-3SI" secondAttribute="bottom" id="SvO-CB-HYt"/>
+                            <constraint firstItem="VTo-u1-3SI" firstAttribute="top" secondItem="gMj-gq-OAQ" secondAttribute="bottom" id="YJ0-Cm-41g"/>
+                            <constraint firstItem="bPd-TG-svp" firstAttribute="centerX" secondItem="Jev-Cu-iBk" secondAttribute="centerX" id="aM7-r1-B9B"/>
+                            <constraint firstItem="bPd-TG-svp" firstAttribute="centerY" secondItem="Jev-Cu-iBk" secondAttribute="centerY" id="pFH-61-HAu"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="bPd-TG-svp" id="pBR-Ld-4CW"/>
+                        <outlet property="webView" destination="VTo-u1-3SI" id="t0u-s5-I6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktL-hB-e5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="1309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r3a-4i-Ho1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P4X-vP-j6L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hM1-zJ-ffP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H5j-Of-3am"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqG-6O-th2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="629"/>
         </scene>
     </scenes>
 </document>
