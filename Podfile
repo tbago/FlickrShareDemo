@@ -4,5 +4,8 @@
 target 'FlickrShareDemo' do
 
 pod 'FlickrKit'
+pod 'MBProgressHUD'
+pod 'KVOController'
+
 end
 
